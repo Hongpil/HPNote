@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/login_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.login.LoginActivity"
+    android:paddingLeft="18dp"
+    android:paddingRight="18dp">
+
+    <ImageView
+        android:id="@+id/img_login_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/note_icon"
+        android:layout_marginTop="50dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/img_login_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:fontFamily="sans-serif-medium"
+            android:textStyle="normal"
+            android:textColor="#27292f"
+            android:lineSpacingExtra="4sp"
+            android:text="Email" />
+
+        <EditText
+            android:id="@+id/edt_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif"
+            android:textStyle="normal"
+            android:textColor="#898c97"
+            android:lineSpacingExtra="7sp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textColorHint="#898c97"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:textSize="10sp"
+            android:fontFamily="sans-serif-medium"
+            android:textStyle="normal"
+            android:textColor="#27292f"
+            android:lineSpacingExtra="4sp"
+            android:text="Password" />
+
+        <EditText
+            android:id="@+id/edt_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif"
+            android:textStyle="normal"
+            android:textColor="#898c97"
+            android:hint="password"
+            android:inputType="textPassword"
+            android:textColorHint="#898c97" />
+
+        <!--
+        아래 코드 적용 이유 : button shadow 를 제거하기 위함.
+        style="?android:attr/borderlessButtonStyle"
+        -->
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-medium"
+            android:textStyle="normal"
+            android:textColor="#ffffff"
+            android:lineSpacingExtra="7sp"
+            android:background="@drawable/bag_btn_green"
+            style="?android:attr/borderlessButtonStyle"
+            android:text="Login"/>
+
+    </LinearLayout>
+
+
+    <!--
+    아래 코드 적용 이유 : button shadow 를 제거하기 위함.
+    style="?android:attr/borderlessButtonStyle"
+    -->
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="38dp"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="normal"
+        android:textColor="#ffffff"
+        android:lineSpacingExtra="7sp"
+        android:background="@drawable/bag_btn_blue"
+        style="?android:attr/borderlessButtonStyle"
+        android:text="SignUp"/>
+
+<!--    &lt;!&ndash;-->
+<!--    ems 개념 :-->
+<!--        - layout_width 가 wrap_content 인 경우에만 적용됨-->
+<!--        - 12라고 하면, 12글자의 너비를 가진다는 의미 (단, 12글자 이상을 입력하는 것은 가능)-->
+<!--    &ndash;&gt;-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/edt_email"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:ems="12"-->
+<!--        android:hint="email"-->
+<!--        android:inputType="textEmailAddress"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/edt_password"-->
+<!--        app:layout_constraintVertical_chainStyle="packed"/>-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/edt_password"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:ems="12"-->
+<!--        android:hint="password"-->
+<!--        android:inputType="textPassword"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/edt_email"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_login"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:text="로그인"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/edt_password" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_kakao"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:text="kakao로 계속하기"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/btn_login" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_google"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:text="google로 계속하기"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/btn_kakao" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_signup"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:text="회원가입"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/btn_google"/>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
